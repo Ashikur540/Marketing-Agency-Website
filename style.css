@@ -8,6 +8,11 @@
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
+:root {
+  --heading-color: #333;
+  --para-color: rgb(133, 133, 133);
+  --color: #560bad;
+}
 
 html {
   font-size: 62.5%;
@@ -19,6 +24,9 @@ li {
 a {
   text-decoration: none;
 }
+p {
+  color: var(--para-color);
+}
 /* //////////////start //////// */
 /* nav bar  */
 nav {
@@ -26,10 +34,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background: transparent;
+  background: #fff;
   transition: 0.5s all ease;
   padding: 1rem 10rem;
-  position: sticky;
+  position: fixed;
+  z-index: 10000000;
   top: 0%;
   box-shadow: 4.5px 4.5px 3.6px rgba(189, 189, 189, 0.09),
     12.5px 12.5px 10px rgba(110, 109, 109, 0.09),
@@ -96,7 +105,6 @@ nav .navbar-toggler .toggler-icon {
 }
 .social-links i:hover {
   color: #5a42d1;
-  
 }
 
 /* nbanner  */
@@ -116,6 +124,7 @@ nav .navbar-toggler .toggler-icon {
   background-attachment: fixed;
   position: relative;
   display: block;
+  z-index: -1;
 }
 
 .wave svg {
@@ -133,15 +142,17 @@ nav .navbar-toggler .toggler-icon {
   justify-content: center;
   align-items: center;
   width: 70vw;
-  margin: 8rem auto;
+  margin: 14rem auto;
 }
 .banner-desc h1 {
   text-align: center;
   font-size: 4rem;
+  color: var(--heading-color);
 }
 .banner-desc p {
   text-align: center;
   font-size: 1.6rem;
+  color: #121212 !important;
 }
 
 .banner-btn {
@@ -188,25 +199,24 @@ nav .navbar-toggler .toggler-icon {
   }
 }
 .cta-secondary {
-    --color: #560bad;
-    font-family: inherit;
-    display: flex;
-    align-items: center;
-    padding: 1.1rem 3rem;
+  --color: #560bad;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 3rem;
 
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--color);
-    transition: color .3s;
-    z-index: 1;
-    font-size: 1.8rem;
-    border-radius: 5rem;
-    font-weight: 500;
-    color: var(--color);
-   
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.3s;
+  z-index: 1;
+  font-size: 1.8rem;
+  border-radius: 5rem;
+  font-weight: 500;
+  color: var(--color);
 }
-.cta-secondary i{
-    margin-left: 1rem;
+.cta-secondary i {
+  margin-left: 1rem;
 }
 
 .cta-secondary:before {
@@ -240,3 +250,78 @@ nav .navbar-toggler .toggler-icon {
 }
 
 /* service */
+#service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  text-align: center;
+}
+#service h1 {
+  font-size: 3rem;
+  margin: 0 auto;
+}
+#service > p {
+  margin: 2rem auto;
+  font-size: 1.8rem;
+}
+
+.service-items {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.service-items-right {
+  width: 40vw;
+  margin: 0 auto;
+}
+.service-items-right img {
+  width: 45vw;
+   margin: 0 auto;
+}
+.service-items-left {
+  width: 50vw;
+}
+.service-items-left .row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2.4rem auto;
+}
+.service-items-left .row .box {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  margin: 1.2rem; 
+}
+.service-items-left .row #active {
+    box-shadow: 0px 2px 8px rgba(75, 75, 75, 0.46);
+    /* border: 1px solid #333; */
+    z-index: 1 ;
+    margin: 1.2rem;
+    border-radius: 5px; 
+}
+.service-items-left .row .box p {
+  text-align: left;
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+.service-items-left .row .box h4 {
+  text-align: left;
+  font-size: 1.8rem;
+}
+.service-items-left .row .box i {
+  text-align: left;
+  font-size: 3.6rem;
+  color: var(--color);
+  margin-bottom: 1.2rem;
+}
