@@ -37,7 +37,7 @@ input:focus {
 .offset::before {
   content: "";
   height: 12rem;
-  margin-top: -4.4rem;
+  margin-top: -1.4rem;
   display: block;
 }
 
