@@ -8,14 +8,13 @@
   p {
     font-size: 1.5rem;
   }
-  
 
-#banner {
+  #banner {
     height: 95vh;
-}
-.wave{
+  }
+  .wave {
     bottom: -1%;
-}
+  }
   .banner-desc h1 {
     text-align: center;
     font-size: 2.8rem;
@@ -36,7 +35,7 @@
   .service-items-right {
     width: 70vw;
     margin: 0 2rem;
-}
+  }
   .service-items-right img {
     width: 75%;
     margin: 0 auto;
@@ -79,7 +78,7 @@
   }
   .subs-form input {
     padding: 1rem 1.8rem;
-    margin: .8rem;
+    margin: 0.8rem;
     border: none;
     border-radius: 50px;
     width: 65vw;
@@ -88,22 +87,23 @@
     /* box-shadow: 20px 20px 60px #c5c5c5, -20px -20px 60px #ffffff; */
     transition: 0.5s;
   }
-
+  #pricing p {
+   padding: 0 2rem;
+   text-align: center;
+  }
   .footer-row {
-  flex-direction: column;
+    flex-direction: column;
     justify-content: space-evenly;
     /* margin-bottom: 3.4rem; */
-}
+  }
 
-.form-inputs .form-input-row input {
-  
+  .form-inputs .form-input-row input {
     width: 93%;
-  
-}
-.last-row p {
+  }
+  .last-row p {
     font-size: 1.6rem;
     padding: 1.6rem;
-}
+  }
 }
 @media (max-width: 760px) {
   html {
