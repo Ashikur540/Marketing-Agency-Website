@@ -8,30 +8,33 @@
     <title>Marketing Agency</title>
     <!-- linking css -->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="responsive.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- wow js cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
     <!-- navigation starts -->
-    <nav>
-        <a href="http://">
+    <nav id="home">
+        <a href="#banner">
             <img src="./Img/logo.png" alt="logo" class="nav-logo">
         </a>
         <div class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="http://">Home</a></li>
-                <li><a href="http://">Service</a></li>
-                <li><a href="http://">Pricing</a></li>
-                <li><a href="http://">Contact</a></li>
+            <ul class="nav-links" id="hammenu">
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <!-- hambarger menu -->
-        <div class="navbar-toggler" type="button" id="bar">
+        <div class="navbar-toggler" type="button" id="hamicon">
             <span class="toggler-icon"></span>
             <span class="toggler-icon"></span>
             <span class="toggler-icon"></span>
@@ -51,15 +54,19 @@
     <!-- banner starts -->
 
     <div id="banner">
-        <div class="banner-desc">
-            <h1>Scale up your business with <br>a strategic ideas with us </h1>
+        <div class="banner-desc   ">
+            <h1>Scale up your business with <br>a strategic ideas with us
+            </h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt <br>explicabo mollitia impedit.</p>
             <div class="banner-btn">
                 <a class="cta-primary" href="#">Get in touch</a>
                 <a class="cta-secondary" href="#">Watch video<i class="fa-solid fa-play"></i></a>
             </div>
 
+
         </div>
+
+
         <div class="wave">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#fff" fill-opacity="1"
@@ -72,11 +79,11 @@
     <!-- banner ends -->
     <!-- service strats -->
 
-    <section id="service">
+    <section id="service" class="offset">
         <h1>Crafted for </h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisic<br>ing elit. Ab ducimus voluptatibus cum. Molestias, dolorem?
         </p>
-        <div class="service-items">
+        <div class="service-items wow animate__animated animate__fadeInUp">
             <div class="service-items-left">
                 <div class="row">
                     <div class="box">
@@ -115,10 +122,10 @@
     <!-- service ends -->
     <!-- pricing section starts  -->
 
-    <section id="pricing">
+    <section id="pricing" class="offset">
         <h1>Pick a plan that's suits<br> you most</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, aliquid?</p>
-        <div class="pricing-cards">
+        <div class="pricing-cards wow animate__animated  animate__fadeInLeftBig  animate__slow	1s">
             <div class="pricing-box">
                 <span>Basic</span>
                 <h2>$19</h2>
@@ -143,7 +150,7 @@
                 <button type="button" value="Purchase now">Purchase now</button>
             </div>
 
-            <div class="pricing-box" id="standard">
+            <div class="pricing-box wow animate__animated  animate__fadeInLeftBig animate__slow	1s" id="standard">
                 <span>Strandard</span>
                 <h2>$34</h2>
                 <p>per member , per month</p>
@@ -172,8 +179,8 @@
             </div>
 
 
-            <div class="pricing-box">
-                <span>Basic</span>
+            <div class="pricing-box wow animate__animated  animate__fadeInLeftBig animate__slow	1s">
+                <span>premium</span>
                 <h2>$89</h2>
                 <p>per member , per month</p>
                 <hr>
@@ -199,17 +206,93 @@
     </section>
     <!-- pricing section ends -->
     <!-- subscribe section starts -->
-    <section id="subscribe">
+    <section id="subscribe" class="offset">
         <div class="subs-content">
             <h1>Getting curious about us?<br>Stay connected</h1>
             <p>Let us know what you think and your ideas</p>
             <div class="subs-form">
-                <i class="fa-solid fa-envelope"></i>
+
                 <input type="email" name="email" placeholder="Your mail">
                 <button type="button" class="subs-btn">Subscribe</button>
             </div>
         </div>
     </section>
+    <!-- subscribe section ends -->
+    <!-- contact  section starts -->
+
+    <section id="contact" class="offset">
+        <h1>Get in touch</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo adipisci similique eaque.</p>
+        <div class="form-inputs">
+            <div class="form-input-row">
+                <input type="text" name="full-name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="email">
+            </div>
+            <div class="form-input-row">
+                <input type="text" name="subject" id="subject" placeholder="Subject">
+                <input type="tel" name="phone" id="phone" placeholder="phone">
+            </div>
+            <textarea name="massage" id="message" rows="05" placeholder="Place your text here....."></textarea>
+            <button type="button" class="subs-btn">Submit</button>
+
+        </div>
+
+
+
+    </section>
+    <!-- contact  section ends -->
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
+        <script>
+        new WOW().init();
+        </script>
 </body>
+<footer>
+    <div class="footer-row">
+        <img src="./Img/logo.png" alt="footer logo" srcset="">
+        <div class="social-links">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-reddit"></i>
+        </div>
+    </div>
+    <div class="footer-row">
+        <div class="footer-col">
+            <h6>Company</h6>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+        </div>
+        <div class="footer-col">
+            <h6>Company</h6>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+        </div>
+        <div class="footer-col">
+            <h6>Company</h6>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+            <a href="http://">About</a>
+        </div>
+        <div class="footer-col">
+            <h6>Subscribe Newsteller</h6>
+            <input type="email" name="email"
+                placeholder="   Your email                                                    >>">
+            <p>Subscribe for weekly podcast notifications.We don't spam.</p>
+        </div>
+    </div>
+    <div class="last-row">
+        <p>Created by &copy; <span>Ashikur Rahman</span> 2022 .UI refrence from <span>Behance</span>.</p>
+    </div>
+</footer>
 
 </html>
