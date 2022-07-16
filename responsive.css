@@ -2,9 +2,15 @@
   html {
     font-size: 40%;
   }
+  :root {
+    --section-header-font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
   .banner-desc h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: var(--heading-color);
   }
   .banner-desc {
@@ -22,6 +28,59 @@
     width: 75%;
     margin: 0 auto;
   }
+  .banner-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.4rem;
+    flex-wrap: wrap;
+  }
+
+  .service-items-left .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin: 2.4rem auto; */
+  }
+  #contact p {
+    text-align: center;
+    width: 90%;
+  }
+  .form-inputs .form-input-row {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+  form-inputs .form-input-row input {
+    padding: 0.4rem;
+    width: 100%;
+    margin: 1rem;
+    margin: 0 auto;
+  }
+  .subs-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .subs-form input {
+    padding: 1rem 1.8rem;
+    margin: .8rem;
+    border: none;
+    border-radius: 50px;
+    width: 65vw;
+    position: relative;
+    background: #e8e8e8;
+    /* box-shadow: 20px 20px 60px #c5c5c5, -20px -20px 60px #ffffff; */
+    transition: 0.5s;
+  }
+
+  .footer-row {
+  flex-direction: column;
+    justify-content: space-evenly;
+    /* margin-bottom: 3.4rem; */
+}
 }
 @media (max-width: 760px) {
   html {
